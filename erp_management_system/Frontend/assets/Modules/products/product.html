@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Management</title>
+   <link rel="stylesheet" href="../../css/style.css">
+   <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="sidebar">
+        <h2>
+    <i class="fas fa-layer-group"></i>
+    ERP System
+</h2>
+        <ul>
+            <li>
+    <a href="../users/dashboard.html">
+        <i class="fas fa-chart-line"></i>
+        Dashboard
+    </a>
+</li>
+
+<li>
+    <a href="../users/user.html">
+        <i class="fas fa-users"></i>
+        Users
+    </a>
+</li>
+
+<li>
+    <a href="product.html" class="active">
+        <i class="fas fa-box"></i>
+        Products
+    </a>
+</li>
+
+<li>
+    <a href="../suppliers/supplier.html">
+        <i class="fas fa-truck"></i>
+        Suppliers
+    </a>
+</li>
+
+<li>
+    <a href="../inventory/inventory.html">
+        <i class="fas fa-warehouse"></i>
+        Inventory
+    </a>
+</li>
+        </ul>
+        <div class="profile-section">
+    <div class="profile-info">
+        <i class="fas fa-user-circle profile-icon"></i>
+        <h4 id="profileName"></h4>
+        <p id="profileRole"></p>
+    </div>
+    <button
+        class="logout-btn"
+        onclick="logout()">
+        Logout
+    </button>
+</div>
+    </div>
+    <div class="main-content">
+        <h1>Product Management</h1>
+        
+        <div class="form-container" id="productForm">
+            <input type="text" id="productName" placeholder="Product Name">
+            <input type="text" id="category" placeholder="Category">
+            <input type="text" id="description" placeholder="Description">
+            <input type="number" id="price" placeholder="Price">
+            <input type="number" id="reorderLevel" placeholder="Reorder Level">
+            <br>
+            
+            <button id="productBtn" onclick="saveProduct()">
+                Save Product
+            </button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Reorder Level</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="productTable">
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="../../js/product.js"></script>
+<script src="../../js/profile.js"></script>
+</body>
+</html>
+
